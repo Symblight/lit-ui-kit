@@ -6,15 +6,18 @@ export default css`
       transform: rotate(1turn);
     }
   }
+
+  :host {
+    color: var(--color-primary);
+  }
+
   .spin {
     display: flex;
     align-items: center;
   }
 
-  .spin > svg {
+  .spin__svg {
     display: inline-block;
-
-    color: var(--color-primary);
     animation: fade-in 1s infinite linear;
   }
 

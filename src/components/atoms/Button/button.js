@@ -1,6 +1,6 @@
 import { LitElement, html, css } from "lit";
 import cn from "classnames";
-import {Spin} from '../Spin/spin'
+import "../Spin/spin";
 
 import styles from "./button.styles";
 
@@ -8,8 +8,8 @@ export class Button extends LitElement {
   constructor() {
     super();
     this.variant = "primary";
-    this.size = 'medium';
-    this.loading = 'false';
+    this.size = "medium";
+    this.loading = "false";
   }
 
   handleClick() {
@@ -17,8 +17,8 @@ export class Button extends LitElement {
   }
 
   spinRender() {
-    if (this.loading === 'true') {
-        return html`<gd-spin></gd-spin>`
+    if (this.loading === "true") {
+      return html`<gd-spin size="small" class="gd-button__spin"></gd-spin>`;
     }
   }
 
@@ -40,13 +40,13 @@ export class Button extends LitElement {
         ["gd-button--medium"]: this.size === "medium",
         ["gd-button--small"]: this.size === "small",
         ["gd-button--large"]: this.size === "large",
-        ["gd-button--loading"]: this.loading === 'true',
+        ["gd-button--loading"]: this.loading === "true",
       })}"
       @click="${this.handleClick}"
     >
-    <div class="gd-button__inner">
-      ${this.spinRender()}
-      <slot></slot>
+      <div class="gd-button__inner">
+        <slot></slot>
+        ${this.spinRender()}
       </div>
     </button>`;
   }

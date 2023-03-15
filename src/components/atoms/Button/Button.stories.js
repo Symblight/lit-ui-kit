@@ -1,6 +1,6 @@
 // import { Meta, StoryObj } from '@storybook/web-components'
 import { html } from "lit-html";
-import '../../../theme/index.css';
+import "../../../theme/index.css";
 import "./index.js";
 
 const Meta = {
@@ -9,14 +9,24 @@ const Meta = {
 
 const Template = ({ aProperty }) =>
   html`
-    <gd-button>Test button</gd-button>
-    <gd-button variant="secondary">Test button</gd-button>
-    <br />
-    <gd-button size="small">Test button</gd-button>
-    <gd-button>Test button</gd-button>
-    <gd-button size="large">Test button</gd-button>
-    <br />
-    <gd-button loading="true">Test button</gd-button>
+    <div class="story-block">
+      <h3>Button variants</h3>
+      <gd-button>Primary</gd-button>
+      <gd-button variant="secondary">Secondary</gd-button>
+    </div>
+    <div class="story-block">
+      <h3>Button sizes</h3>
+      <gd-button size="small">Small</gd-button>
+      <gd-button>Default</gd-button>
+      <gd-button size="large">Large</gd-button>
+    </div>
+    <div class="story-block">
+      <h3>Loading</h3>
+      <gd-button loading="true">Primary loading</gd-button>
+      <gd-button loading="true" variant="secondary">
+        Secondary loading
+      </gd-button>
+    </div>
   `;
 
 export const ButtonStory = Template.bind({});

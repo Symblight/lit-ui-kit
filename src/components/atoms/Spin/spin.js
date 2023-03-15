@@ -20,7 +20,7 @@ export class Spin extends LitElement {
   render() {
     return html` <span role="img" class="spin">
       <svg
-        class="${cn({
+        class="${cn("spin__svg", {
           ["spin--large"]: this.size === "large",
           ["spin--medium"]: this.size === "medium",
           ["spin--small"]: this.size === "small",

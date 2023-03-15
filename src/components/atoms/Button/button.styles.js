@@ -39,7 +39,7 @@ export default css`
   }
 
   .gd-button--primary:active {
-    background-color: var( --button-active-background-primary);
+    background-color: var(--button-active-background-primary);
   }
 
   .gd-button--secondary {
@@ -68,6 +68,24 @@ export default css`
 
   .gd-button__inner {
     display: flex;
-    align-items: center
+    align-items: center;
+  }
+
+  .gd-button__spin {
+    color: inherit;
+  }
+
+  .gd-button--small .gd-button__spin {
+    padding-left: 11px;
+    font-size: 14px;
+  }
+
+  .gd-button--medium .gd-button__spin {
+    padding-left: 15px;
+  }
+
+  .gd-button--large .gd-button__spin {
+    padding-left: 18px;
+    font-size: 18px;
   }
 `;
